@@ -32,4 +32,4 @@ The project's queries demonstrate SQL's robust data manipulation and analysis ca
 
 # **Full Project Descriptions and Analysis**
 
-Please see the full project documentation for a detailed exploration of the SQL queries and analysis conducted in this project.
+Please see the full project documentation by clicking on this link (https://github.com/cristianomozart/COVID19-SQL-Analysis/blob/main/ProjectDetails) for a detailed exploration of the SQL queries and analysis conducted in this project.
