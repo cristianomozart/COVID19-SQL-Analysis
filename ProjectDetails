@@ -1,0 +1,145 @@
+COVID19-SQL-Analysis
+
+# Introduction
+
+The COVID-19 pandemic has been a defining global health crisis of our time, profoundly impacting societies and economies worldwide. This SQL project aims to dissect the voluminous COVID-19 data provided by Our World in Data to glean insights into the spread and severity of the virus, the effectiveness of the global response, and the progress of vaccination efforts across different demographics.
+
+# Goals and Objectives
+
+The primary objectives of this project were to:
+
+1. Analyse COVID-19 case and death data to understand the pandemic's progression and mortality impact across different regions.
+
+2. Calculate the death percentage to evaluate the virus's lethality in various locations, with a particular focus on Brazil due to its significant caseload.
+
+3. Determine the proportion of populations infected and the vaccination rates to assess public health responses.
+
+# Data Preparation
+
+The raw dataset, sourced from Our World in Data's GitHub repository, underwent initial formatting in Excel. The 'population' column was strategically moved to facilitate direct SQL analysis, reducing the need for complex joins. This preprocessing step was crucial in streamlining the subsequent SQL querying process.
+
+During this data preparation phase, ensuring the dataset's integrity while reformatting in Excel was one significant challenge. Specifically, moving the 'population' column required meticulous attention to preserve data alignment across rows. This step underscored the importance of careful data handling before analysis. Overcoming this challenge involved double-checking alignments and employing Excel formulas to automate checks, ensuring no data was misplaced in the process. This preparatory work was essential for seamless SQL analysis, highlighting the critical role of data integrity from the outset.
+
+# SQL Queries and Analysis
+
+## Data Organization and Integrity: Laying the Foundation for In-depth 
+
+## Introduction
+
+In the early stages of the SQL project, it aimed to meticulously organise and validate the COVID-19 dataset to ensure the accuracy and reliability of the subsequent analysis. This foundational work was crucial for creating a structured and meaningful exploration of the pandemic's data.
+
+## Organizing Data for Time-Series Analysis:
+
+## Query 1 Overview: The initial step involved sorting the COVID-19 cases and deaths data by location and date. This organisational approach was essential for a time-series analysis, allowing me to observe the progression of the pandemic across different regions chronologically.
+
+### Insight and Skill Highlight: This process demonstrated the importance of data organisation in SQL analysis. Establishing a logical order early on ensured that the data was primed for detailed trend analysis and comparative studies across locations over time.
+
+## Resolving Data Type Challenges for Mortality Rate Calculation:
+
+## Query 2 Challenge: I encountered a significant challenge when calculating the death percentage from the COVID-19 data. The total_cases and total_deaths columns were stored as nvarchar (string) data types, preventing me from performing numerical calculations.
+### Solution and Skill Highlight: Recognising the importance of accurate data types for mathematical operations, I employed the CONVERT and CAST functions to transform these columns into float, enabling the computation of the death percentage. This step was pivotal in my analysis, illustrating problem-solving skills and proficiency with SQL's data manipulation capabilities.
+### Outcome: Successfully converting the data types allowed me to calculate the mortality rate of COVID-19, a critical metric for understanding the virus's lethality in various locations.
+
+## Country-Specific Analysis: Zooming in on Brazil's COVID-19 Data
+
+### Introduction: After laying the groundwork with initial data organisation and integrity checks, I focused on a more detailed analysis of Brazil, a country notably hard hit by the pandemic. This decision was motivated by the desire to understand regional dynamics and Brazil's specific challenges.
+
+### Choosing Brazil for In-depth Analysis:
+
+## Query 3 Overview: Leveraging the previously organised and validated data, I crafted a query to calculate the death percentage specifically for Brazil, filtering the data to focus on this country. This approach allowed for a concentrated analysis of the pandemic's lethality in one of the most affected countries.
+### Insight and Skill Highlight: Focusing on Brazil exemplified my ability to conduct targeted analyses within larger datasets. By narrowing the scope, I uncovered specific trends and outcomes unique to Brazil's experience with COVID-19, such as the death percentage over time and its comparison to global averages.
+
+## Addressing Data Challenges:
+
+### Challenge and Solution: The key to this analysis was accurately filtering the dataset to include only Brazilian data, ensuring the location field matched Brazil across various naming conventions. This step demonstrated my attention to detail and proficiency with SQL filtering techniques, which are crucial for accurate, location-specific insights.
+### Outcome: The focused query provided clarity on Brazil's death percentage and set a precedent for conducting similar region-specific analyses, offering a template for exploring the pandemic's impact on other locations with unique challenges.
+
+## Query 4: Insight into Population Impact
+
+### Overview: Focused on Brazil, this query calculates the COVID-19 infection rate as a percentage of the total population.
+### Skills and Insight: By comparing total cases directly with the population, this analysis provided a clearer picture of the pandemic's penetration in Brazil, offering insights beyond raw case counts. It demonstrated the ability to apply SQL operations to contextualise epidemiological data within the broader demographic landscape, a crucial skill in public health data analysis.
+
+## Query 5: High Infection Rates Against Population
+
+### Overview: Identified locations with the highest COVID-19 infection rates per population.
+### Skills and Insight: This query showcases the application of MAX() in combination with population-based calculations to pinpoint areas most affected per capita. Identifying such trends is invaluable for targeting public health responses and demonstrates an adeptness at using SQL for public health analytics.
+
+## Query 6: Focus on Mortality
+### Overview: Extracted countries with the highest absolute numbers of COVID-19 deaths.
+### Skills and Insight: This analysis ensured accuracy and relevance in the data presented by refining the dataset to exclude aggregated entries like continents or "World." This step underscores the importance of data cleanliness in SQL analysis and the ability to distil critical insights from global datasets.
+
+## Advanced-Data Analysis Techniques
+
+## Joining Tables for Enriched Insights
+
+## Technical Overview and Application
+
+### Overview: In the project, the joining of the COVID-19-Deaths Table with the COVID-19-Vaccination Table on location and date columns enabled a holistic analysis of the pandemic's impact versus the response efforts.
+### Insight: This technique has allowed for the direct comparison and correlation of death counts and vaccination rates over time within the same locales. Merging these datasets provided a nuanced view of how vaccination efforts might influence mortality rates, which is essential for evaluating public health strategies.
+
+## Skills Demonstrated
+
+### SQL Join Proficiency: Mastery in SQL joins is demonstrated, showcasing an understanding of effectively combining data from multiple tables based on common identifiers. This skill is pivotal for data analysts, as it synthesises disparate data sources into a cohesive dataset for comprehensive analysis.
+### Data Integrity and Accuracy: Ensuring the correct alignment of data through joins requires a keen eye for detail and an understanding of the datasets at hand. This step underscores the importance of data integrity in the analysis, ensuring that the insights drawn are based on accurate and reliable data combinations.
+
+## Strategic Data Analysis
+
+### Application: By juxtaposing death counts with vaccination rates, we can assess the effectiveness of vaccination campaigns in mitigating the pandemic's impact. This analysis can inform public health decisions and policy formulations.
+### Insight: The ability to conduct such a detailed and meaningful analysis reflects the SQL technical skills acquired and a strategic data analysis approach, which showcases the capability to derive actionable insights with real-world implications.
+
+## Query 7: Rolling Vaccination Count
+
+### Overview: Employed window functions to calculate a rolling total of vaccinations by location and date.
+### Skills and Insight: This advanced technique highlights the dynamic nature of vaccination efforts over time. The use of window functions here indicates an understanding of SQL, which can perform complex cumulative analyses necessary for tracking progress in real-time vaccination campaigns.
+
+## Query 8: Vaccination Progress as a Percentage of Population
+
+### CTE and TEMP TABLE Applications: Utilised both a CTE and a TEMP TABLE to calculate the daily percentage of the population vaccinated.
+### Skills and Insights: This dual approach showcases flexibility in SQL methodology and emphasises strategic thinking in data organisation for analysis. By preparing the data in these structures, the analysis facilitated a deeper understanding of vaccination coverage, which is crucial for evaluating public health strategies.
+
+## Creating a View for Future Visualization
+
+### Overview: Established a view to consolidate rolling vaccination data for easy access and future visualisation.
+### Skills and Insight: Creating a view serves a dual purpose: it simplifies data retrieval for reporting and primes the data for visual representation in tools like Tableau. This step reflects foresight in data management and understanding the end-to-end data analysis process, from raw data processing in SQL to storytelling through visualisations.
+
+## Advanced-Data Analysis: CTEs and Temporary Tables for Vaccination Progress
+
+## Common Table Expressions (CTEs) for Organized Analysis
+
+### Technical Overview: In the project, a CTE was utilised to neatly organise vaccination data before calculating the percentage of the population vaccinated daily. This structure allowed for an organised, readable approach to managing intermediate results.
+### Insight and Application: Using a CTE showcases an ability to segment the analysis into manageable, logical portions. The analysis remains clear and structured by first aggregating new vaccinations and then applying the population percentage calculation. This method demonstrates a nuanced understanding of SQL capabilities for handling complex data transformations efficiently.
+### Skill Highlight: Mastery in CTEs is highly regarded in SQL proficiency, indicating the ability to manage complex queries and improve readability and maintenance of the code. It reflects advanced SQL knowledge, which is crucial for data-intensive analysis projects.
+
+### Temporary Tables for Flexible Data Manipulation
+
+### Technical Overview: The project employs a temporary table to store intermediate results of the rolling vaccination count before calculating the daily population percentage vaccinated.
+### Insight and Application: Temporary tables are instrumental for data analyses that require multiple steps, offering a flexible workspace for data manipulation. In this project, the temporary table served as a foundational dataset for further calculations, illustrating an effective strategy for handling multipart analytical processes.
+### Skill Highlight: The strategic use of temporary tables exemplifies an understanding of leveraging SQL Server's features to facilitate complex data analysis tasks. It underscores the ability to think ahead and structure the analysis flow to enhance clarity and efficiency.
+
+## Creating a View for Visualisation Preparedness
+
+### Strategic Decision: Finalising the analysis with the creation of a view consolidates the essential data into an easily accessible format, priming it for visualisation in Tableau.
+### Insight and Application: This step is pivotal for transitioning from raw analysis to storytelling with data. A view simplifies future data retrieval, making it straightforward to connect to visualisation tools and create impactful charts and graphs that convey the vaccination progress narrative.
+### Skill Highlight: Demonstrating foresight in preparing data for reporting and visualisation underscores an understanding of the full data analytics lifecycle. It showcases not just SQL technical skills but also strategic planning for data presentation, an invaluable trait for data analysts.
+
+## Results and Interpretation
+
+The analyses painted a stark picture of COVID-19's impact, revealing disparities in infection and mortality rates that could correlate with various socioeconomic factors. Regions with limited healthcare infrastructure appeared particularly vulnerable to higher mortality rates. Meanwhile, the data indicated an inverse relationship between vaccination rates and new cases, underscoring the efficacy of the vaccines.
+
+## Visualisation Plan
+
+While the current project focuses on SQL analysis, it is the groundwork for a dedicated visualisation phase. The insights derived here will be translated into visual narratives in a subsequent project, utilising Tableau to bring the data to life. This bifurcated approach underscores the importance of a solid analytical foundation for compelling data storytelling. Stay tuned for the visualisation project, where we will explore the pandemic's impact through engaging and informative visuals.
+
+Visualisations created in Tableau will bridge raw data and actionable insights, transforming complex datasets into intuitive and engaging graphics. These visual representations will enable easier comprehension of trends and patterns, facilitating data-driven discussions.
+
+## Reflection and Learning
+
+This project was a profound learning journey, sharpening my technical SQL skills and analytical thinking. I delved into advanced SQL functions, such as window functions and CTEs, which were instrumental in performing complex data manipulations. Facing and overcoming challenges, such as data type discrepancies and ensuring data integrity through joins, taught me the value of persistence and attention to detail in data analysis. 
+
+Moreover, this project highlighted the importance of continuous learning; encountering new SQL features and finding creative solutions has been incredibly rewarding. Reflecting on this experience, I am confident in tackling data analysis challenges and am excited to apply these skills to future projects.
+
+This project reinforced the importance of meticulous data preparation and demonstrated the potent capabilities of SQL in data analytics. Leveraging SQL functions overcame challenges such as data type discrepancies, underscoring the adaptability required in data science.
+
+## Conclusion
+
+The SQL project provides a microcosm of the data analyst's role in interpreting vast data streams to inform strategic decision-making. The insights gleaned here offer a retrospective understanding of the pandemic and equip policymakers with the knowledge to craft informed responses to future public health crises.
