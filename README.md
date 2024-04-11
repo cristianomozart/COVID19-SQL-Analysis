@@ -16,7 +16,7 @@ The foundation of our analysis was ensuring the data's accuracy and reliability.
 
 Brazil's pandemic experience, marked by a significant caseload, provided a focused lens through which to view the virus's impact. A dedicated query calculated the death percentage for Brazil, offering insights into the pandemic's lethality within the country. This deep dive into regional data underscored the importance of targeted analysis in large datasets, revealing specific trends and challenges faced by Brazil.
 
-##**Advanced-Data Analysis Techniques**
+## **Advanced-Data Analysis Techniques**
 
 The project's analytical depth was further enhanced through the use of advanced SQL techniques:
 
@@ -26,6 +26,6 @@ The project's analytical depth was further enhanced through the use of advanced 
 
 3. **Population Impact Analysis:** By calculating infection rates relative to population sizes, we provided a clearer picture of the pandemic's reach, emphasising the importance of context in epidemiological data analysis.
 
-##**Insights and Reflections**
+## **Insights and Reflections**
 
 The project's queries demonstrate SQL's robust data manipulation and analysis capabilities and highlight the critical role of data analysis in understanding and responding to global health crises. The insights gleaned from this project contribute to our collective knowledge of the pandemic, offering data-driven perspectives that can inform future public health strategies.
