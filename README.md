@@ -29,3 +29,7 @@ The project's analytical depth was further enhanced through the use of advanced 
 ## **Insights and Reflections**
 
 The project's queries demonstrate SQL's robust data manipulation and analysis capabilities and highlight the critical role of data analysis in understanding and responding to global health crises. The insights gleaned from this project contribute to our collective knowledge of the pandemic, offering data-driven perspectives that can inform future public health strategies.
+
+# **Full Project Descriptions and Analysis**
+
+Please see the full project documentation for a detailed exploration of the SQL queries and analysis conducted in this project.
